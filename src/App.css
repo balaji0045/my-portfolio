@@ -1,0 +1,19 @@
+body, html, #root {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+ }
+ 
+
+.App {
+   display:flex;
+   flex-direction: column;
+   height: 100%;
+}
+
+.main{
+   margin-top: 100px;
+   overflow-y: auto;
+   flex: 1;
+
+}

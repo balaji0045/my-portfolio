@@ -1,0 +1,194 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* color: black; */
+}
+nav{
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background-color: black; */
+  position:fixed;
+  color:rgb(7, 7, 7);
+  padding: 1rem 2rem;
+  z-index: 100;
+  width: 100%;
+}
+.navbarglass{
+  background: rgba(255, 255, 255, 0.1);
+  /* background: rgba(0, 0, 0, 0.5); */
+   transition: 1s linear ease-in-out;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid #968e8efd;
+
+}
+.menuitems{
+    display: flex;
+    align-items: center;
+    /* justify-content: end;  my fault */
+    justify-content: flex-end; /* Changed to flex-end */
+
+    /* width:50% */
+    /* flex-direction: row; */
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width:60%;
+  gap:10px;
+  margin-right: 60px;
+
+}
+li{
+  text-decoration: none;
+  list-style: none;
+}
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around; */
+
+.logoname{
+  cursor: pointer;
+}
+.link{
+  display: flex;
+  text-decoration: none;
+  color: rgb(12, 12, 12);
+  /* color: white; */
+  justify-content: space-between;
+   align-items: center;
+   padding: 0 1rem;
+   height:100%;
+   cursor:pointer;
+}
+.link.dark{
+  color:white
+}
+.icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-tabler{
+  margin-right: 2rem;
+  font-size:2rem;
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+  /* font-size: 3rem; */
+}
+.icon-tabler.dark{
+  /* color: white; */
+}
+.mobile-menu{
+  color: white;
+margin-right: 1rem;
+font-size:2rem;
+cursor: pointer;
+
+/* display: none; */
+
+}
+.mobile-menu-icon{
+  display: none;
+}
+@media screen and (max-width:768px) {
+  .menuitems{
+    display: none;
+  }
+  .mobile-menu{
+    color: rgb(10, 10, 10);
+    
+    outline: none;
+  }
+  .mobile-menu-icon{
+    display: block;
+    color: rgb(255, 255, 255);
+  }
+  .menu-items-mobile ul{
+    position: absolute;
+     display: block;
+   /* background-color: #070606; */
+    min-height: 100vh;
+  left: 0;
+  top: 75px;
+  width: 100%;
+  transition: 2s ease-in;
+  background: rgba(0, 0, 0, 0.5);
+  top:70px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+  }
+.menu-items-mobile ul li a{
+  padding: 5% 10%;
+  border-bottom: 2px solid white;
+
+}
+
+}
+
+@media screen and (min-width:800px) {
+  .icon-tabler {
+    margin-right: 0.5rem; /* Further reduce margin-right */
+    font-size: 1.5rem; /* Slightly reduce font size */
+  }
+}
+
+
+
+/* / */
+/* Existing CSS styles */
+
+.dark-mode {
+  color: white;
+}
+
+.navbarglass.dark-mode {
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.normalNavBar.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.menu-items-mobile.dark-mode ul {
+  background: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.mobile-menu.dark{
+  color: black;
+}
+
+.link.dark-mode {
+  color: white;
+}
+
+.mobile-menu-icon.dark-mode {
+  color: white;
+}
+
+.mobile-menu.dark-mode {
+  color: white;
+}
+
+.icon-tabler.dark-mode {
+  color: white;
+  /* background-color:white; */
+
+}
+
+/* You may need to add additional dark mode styles here */

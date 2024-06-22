@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.services {
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 2rem;
+}
+
+.service-container {
+  width: 100%;
+  /* height: 100%; */
+}
+
+.service-container .header {
+  text-align: center;
+  font-size: 32px;
+  color: black;
+}
+
+.row-container .icon {
+  text-align: center;
+  font-size: 40px;
+}
+
+.row-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+  place-items: center;
+}
+
+.row-container .columns {
+  border: 0.5px solid black;
+  border-radius: 15px;
+  padding: 1rem;
+  height: auto;
+  margin-top: 20px;
+  overflow: hidden;
+  max-width: 90%;
+  background-color: white;
+}
+
+.row-container .columns .service-para {
+  line-height: 1.5;
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 10px;
+}
+
+.row-container .columns .sub-heading {
+  font-size: 20px;
+  margin: 0 0;
+}
+
+.row-container .columns .icon {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 576px) {
+  .row-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .row-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .row-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .row-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,115 @@
+import React, { useContext, useEffect, useState } from 'react'
+import { FaBars } from 'react-icons/fa'
+import {Link as RouterLink} from 'react-router-dom'
+import { Link as ScrollLink ,animateScroll as scroll } from 'react-scroll'
+import '../NavBar/NavBar.css';
+import { FaSun } from "react-icons/fa6";
+import { MdOutlineClose } from "react-icons/md";
+import { ThemeContext } from '../Context/themeContext';
+import { BsFillMoonStarsFill } from 'react-icons/bs';
+
+
+
+const NavBar = () => {
+  const [isMobile,setisMobile]=useState(false);
+  const [navbar,setNavbar]=useState(false);
+  const {theme,toggleTheme}=useContext(ThemeContext)
+  console.log(theme)
+  useEffect(()=>{
+    const changeNavBarColor=()=>{
+    if(window.scrollY >= 80){
+      setNavbar(true)
+      console.log("Hello From Navbar");
+    }else{
+      setNavbar(false);
+    }
+  }
+  window.addEventListener('scroll',changeNavBarColor)
+
+   return ()=>{
+    window.removeEventListener('scroll', changeNavBarColor);
+  };
+
+  },[])
+
+  return (
+    <nav className={navbar ? "navbarglass" :"normalNavBar"}
+    >
+
+     {/* <nav className={`${navbar ? "navbarglass" : "normalNavBar"}  `}
+      style={{
+        backgroundColor: theme ==='dark' ? 'black':"white",
+        color:theme === 'dark'?'white':'dark'
+      }}
+    > */}
+
+   <div>
+        {/* <img src={logo} alt=""  /> */}
+        <h1 className={'logoname'}
+         
+        >PortFolio</h1>
+   </div>
+     <div className={isMobile?'menu-items-mobile':'menuitems'}>
+        <ul >
+           <li>
+          <RouterLink className={'link'} to='/'>Home</RouterLink>
+           </li>
+          <li>
+            <ScrollLink to='about' className={'link'} smooth={true} duration={500} offset={-65}>About</ScrollLink>
+          </li>
+          <li>
+            <ScrollLink to='skills'className={'link'} smooth={true} duration={500} offset={-65}>Skills</ScrollLink>
+          </li>
+          <li>
+            <ScrollLink to='projects' className={'link'} smooth={true} duration={500} offset={-65}>Projects</ScrollLink>
+          </li>
+          <li>
+            <ScrollLink to='blogs'  className={'link'} smooth={true} duration={500} offset={-65}>Blogs</ScrollLink>
+          </li>
+          <li>
+            <ScrollLink to='contactus'  className={'link'} smooth={true} duration={500} offset={-65}>Contact </ScrollLink>
+          </li>
+
+        </ul> 
+     </div>
+     <div className="icons">
+     <span onClick={toggleTheme} >
+     {theme === 'light' ?      
+      (<BsFillMoonStarsFill className='icon-tabler' style={{
+          color:theme === 'dark'?'white' :"black"
+         }} /> ):(
+      <FaSun className='icon-tabler' style={{
+          color:"white",
+          backgroundColor:'white',
+          borderRadius:10
+         }}/>)
+     }
+     </span>
+
+       <div className="mobile-menu-icon">
+           <span onClick={()=>setisMobile(!isMobile)}
+           style={{
+            color:theme === 'dark'?'white':'black'
+           }}
+           >
+
+            {isMobile ?
+            
+            (<MdOutlineClose className={'mobile-menu'} />
+            ):
+            (<FaBars  className={'mobile-menu'}
+              style={{
+                borderRadius:10
+              }}
+            />) 
+            }
+           </span>
+        </div>
+
+      </div>
+    
+    </nav>
+  )
+}
+
+export default NavBar

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.about{
+  min-height: 100vh;
+  background-color: antiquewhite;
+}
+.abtheading{
+      text-align: center;
+      font-size: 25px;
+}
+#detailHeading{
+  font-family:'Allura';
+  font-size: 43px;
+}
+.detailContent{
+  font-family: 'Poppins';
+}
+#para{
+  font-family: 'Poppins',sans-serif;
+  font-size: 17px;
+  font-weight:400;
+  line-height: 32px;
+  font-style:normal;
+  
+}
+.personaldetils{
+  padding-top: 10px;
+  line-height: 40px;
+}
+.personaldetils #dsvalue{
+    font-size: 17px;
+    font-family: 'Poppins';
+    font-weight:400;
+    padding-left: 12px;
+}
+.abtdetailscontainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin: 7px;
+}
+.personaldetils .email a{
+  color: #43aafd;
+  text-decoration: none;
+}
+.downloadButtons .readmore{
+  margin-left: 40px;
+}
+.aboutOnly{
+  border: 1px solid black;
+  width: 45%;
+  flex: 1;
+  min-height: 70vh;
+  /* height: 80%; */
+  padding: 25px;
+  border-radius: 3px;
+}
+.detailContent{
+}
+.skillsContainer{
+  width: 45%;
+  flex: 2;
+  /* min-height: 81vh;; */
+  padding: 15px;
+  border:1px solid black;
+  /* background-color: green; */
+}
+.icons-skils{
+  /* width: 50px;
+  height: 50px; */
+  width: 4rem;
+    height: 4rem;
+    /* padding: 20px; */
+    /* margin: .5rem 3rem; */
+}
+
+#frontendhead h3{
+  font-size:17px;
+
+}
+
+.front-end-icons{
+  display: grid;
+  grid-template-columns:repeat(4,1fr);
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+
+}
+.backend-icons{
+  display: grid;
+  grid-template-columns:repeat(4,1fr);
+  gap: 10px;
+  width: 100%;
+   margin-top: 20px;
+}
+.toolsicons{
+  display: grid;
+  grid-template-columns:repeat(4,1fr);
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+
+  
+}

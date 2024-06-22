@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.about {
+  min-height: 100vh;
+  background-color: #f3eeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.abtheading {
+  text-align: center;
+  font-size: 25px;
+}
+
+#detailHeading {
+  font-family: 'Allura';
+  font-size: 43px;
+}
+
+.detailContent {
+  font-family: 'Poppins';
+}
+
+#para {
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 32px;
+  font-style: normal;
+}
+
+.personaldetils {
+  padding-top: 10px;
+  line-height: 40px;
+}
+
+.personaldetils #dsvalue {
+  font-size: 17px;
+  font-family: 'Poppins';
+  font-weight: 400;
+  padding-left: 12px;
+}
+
+.abtdetailscontainer {
+  display: flex;
+  flex-wrap: wrap; /* Allow containers to wrap to the next line */
+  justify-content: center;
+  gap: 20px; /* Adjust gap between containers */
+  max-width: 1200px; /* Limit max width of the container */
+  margin: 0 auto; /* Center align the container */
+  padding: 0 20px; /* Horizontal padding to prevent content from touching edges */
+  margin-bottom: 10px;
+}
+
+.personaldetils .email a {
+  color: #43aafd;
+  text-decoration: none;
+}
+
+.downloadButtons .readmore {
+  margin-left: 40px;
+}
+
+.aboutOnly, .skillsContainer {
+  width: calc(50% - 20px); /* Adjust width for two columns with gap */
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 1px 6px rgba(0, 0, 0, 0.08);
+  background-color: white;
+}
+
+.skillsContainer {
+  margin-left: 20px; /* Add space between containers */
+}
+
+.icons-skils {
+  width: 4rem;
+  height: 4rem;
+}
+
+#frontendhead h3 {
+  font-size: 17px;
+}
+
+.front-end-icons, .backend-icons, .toolsicons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 900px) {
+  .abtdetailscontainer {
+    /* padding: 0 15px */
+  }
+
+  .aboutOnly, .skillsContainer {
+    width: calc(100% - 30px); /* Adjust width for full width on smaller screens with gap */
+    margin-bottom: 20px; /* Add bottom margin for better spacing */
+  }
+
+  .abtheading {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .aboutOnly, .skillsContainer {
+    width: calc(100% - 30px); /* Adjust width for full width on very small screens with gap */
+    margin: 15px 0; /* Adjust margin for very small screens */
+  }
+
+  #detailHeading {
+    font-size: 32px;
+  }
+
+  .detailContent h3 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+.abtdetailscontainer{
+  padding: 0;
+}
+  #para {
+    font-size: 16px;
+    line-height: 28px;
+    color: #646464;
+  }
+
+  .front-end-icons, .backend-icons, .toolsicons {
+    grid-template-columns: repeat(3, 1fr); /* Adjust grid columns for smaller screens */
+    gap: 15px; /* Increase gap for better spacing */
+  }
+
+  .downloadButtons {
+     display: flex;
+     flex-direction: column;
+     gap: 3px;
+     font-size: 6px;
+     
+  }
+  .downloadButtons .readmore{
+    flex: 1;
+    margin: 0;
+    margin-top: 3px;
+  }
+  .downloadButtons .download{
+    flex: 1;
+  }
+}
+
+@media screen and (max-width:360px) {
+  .personaldetils #dsvalue{
+    font-size: 13px;
+    padding-left: 9px;
+  }
+
+
+}
