@@ -17,3 +17,6 @@ body, html, #root {
    flex: 1;
 
 }
+*::selection{
+   color: #7f47b3;
+}

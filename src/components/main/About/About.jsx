@@ -143,7 +143,9 @@ const {theme}=useContext(ThemeContext);
           </div>
           
           <div className="backicons">
-          <img alt="express" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
+          <img alt="express" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"  style={{
+            backgroundColor:"white"
+          }} />
 
           </div>
           <div className="backicons">

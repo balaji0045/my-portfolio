@@ -1,9 +1,0 @@
-button: #646cff
-
-Poppins, sans-serif;
-
-{/* (<BsFillMoonStarsFill className='icon-tabler' style={{
-          color:theme === 'dark'?'white' :"black"
-         }} /> ): */}
-
-         className={`link ${theme}`}
