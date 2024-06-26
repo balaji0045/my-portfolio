@@ -13,7 +13,7 @@ const Footer = () => {
          <div className="foooter-container">
                  <div className="topitems">
                      <div className="header">
-                      <h3>Portfolio</h3>
+                      <h3>Portfolio</h3> 
                       </div>
                       <div className="icons" >
                         <Instagram style={{fontSize:'40px'}} className={`icon ${theme==='dark'? 'darkmode':''}`}/>

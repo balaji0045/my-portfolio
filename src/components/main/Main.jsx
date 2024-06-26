@@ -6,10 +6,16 @@ import Projects from './projects/Projects'
 import ContactUs from './ContactUs/ContactUs'
 import Blogs from './Blogs/Blogs'
 import './Main.css'
+import NavBar from '../NavBar/NavBar';
+
 import ParticleHeaderBg from '../particlesBg/ParticlesHeader/ParticleHeaderBg'
+import Footer from '../Footer/Footer';
+
 const Main = () => {
   return (
     <div className='container'>
+            <NavBar />
+
      <section id='home'>
       <Home />
      </section>
@@ -26,6 +32,8 @@ const Main = () => {
       <ContactUs />
      </section>
      
+     <Footer/>
+
     </div>
   )
 }

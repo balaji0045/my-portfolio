@@ -8,7 +8,7 @@ import { MdOutlineClose } from "react-icons/md";
 import { ThemeContext } from '../Context/themeContext';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 
-const NavBar = () => {
+const NavBarPages = () => {
   const [isMobile, setisMobile] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -43,19 +43,19 @@ const NavBar = () => {
             <RouterLink className={`link ${theme === 'dark' ? 'dark-mode' : ''}`} to='/'>Home</RouterLink>
           </li>
           <li>
-            <ScrollLink to='about' className={`link ${theme === 'dark' ? 'dark-mode' : ''}`} smooth={true} duration={500} offset={-65}>About</ScrollLink>
+            <RouterLink to='/' className={`link ${theme === 'dark' ? 'dark-mode' : ''}`} >About</RouterLink>
           </li>
           <li>
-            <ScrollLink to='services' className={`link ${theme === 'dark' ? 'dark-mode' : ''}`} smooth={true} duration={500} offset={-65}>Services</ScrollLink>
+            <RouterLink to='/' className={`link ${theme === 'dark' ? 'dark-mode' : ''}`} >Services</RouterLink>
           </li>
           <li>
-            <ScrollLink to='projects' className={`link ${theme === 'dark' ? 'dark-mode' : ''}`} smooth={true} duration={500} offset={-65}>Projects</ScrollLink>
+            <RouterLink to='/' className={`link ${theme === 'dark' ? 'dark-mode' : ''}`} >Projects</RouterLink>
           </li>
           <li>
-            <RouterLink to='/blogs' className={`link ${theme === 'dark' ? 'dark-mode' : ''}`} >Blogs</RouterLink>
+            <RouterLink to='b' className={`link ${theme === 'dark' ? 'dark-mode' : ''}`} >Blogs</RouterLink>
           </li>
           <li>
-            <ScrollLink to='contactus' className={`link ${theme === 'dark' ? 'dark-mode' : ''}`} smooth={true} duration={500} offset={-65}>Contact</ScrollLink>
+            <RouterLink to='/' className={`link ${theme === 'dark' ? 'dark-mode' : ''}`} >Contact</RouterLink>
           </li>
         </ul>
       </div>
@@ -81,4 +81,4 @@ const NavBar = () => {
   );
 }
 
-export default NavBar;
+export default NavBarPages;
