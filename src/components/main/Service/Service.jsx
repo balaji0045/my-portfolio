@@ -26,11 +26,8 @@ const Service = () => {
             color:theme=== 'dark'?"#3399ff":''
                     }}>Services</h2>
          </header>
-    <motion.div className="row-container"
-    variants={fadeIn('right',0.2)}
- initial='hidden'
-  whileInView={'show'}
-    viewport={{once:false,amount:0.7}}
+    <div className="row-container"
+  
 >
           <div className="columns"
           style={{
@@ -153,7 +150,7 @@ const Service = () => {
           
 
 
-        </motion.div>
+        </div>
 
 
       </div>

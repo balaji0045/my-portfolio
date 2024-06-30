@@ -39,15 +39,11 @@ const {theme}=useContext(ThemeContext);
 
  <div className="abtdetailscontainer">
 
-<motion.div className="aboutOnly" style={{
+<div className="aboutOnly" style={{
   backgroundColor: theme ==='dark'?"#0e0c0c":'',
   color:theme==='dark'?"white":''
  }}
- variants={fadeIn('right',0.2)}
- initial='hidden'
-  whileInView={'show'}
-    viewport={{once:false,amount:0.7}}
-
+ 
 >
        <div className="abtdetailsHeading">
 
@@ -92,17 +88,13 @@ const {theme}=useContext(ThemeContext);
 
          </div>
 
-    </motion.div>
+    </div>
 
-  <motion.div className="skillsContainer"
+  <div className="skillsContainer"
    style={{
   backgroundColor: theme ==='dark'?"#0e0c0c":'',
   color:theme==='dark'?"white":''
  }}
- variants={fadeIn('left',0.2)}
- initial='hidden'
-  whileInView={'show'}
-    viewport={{once:false,amount:0.7}}
 
   >
         
@@ -208,7 +200,7 @@ const {theme}=useContext(ThemeContext);
    </div>
 
 
-    </motion.div>
+    </div>
 
       </div>
 

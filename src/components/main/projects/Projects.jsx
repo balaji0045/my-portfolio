@@ -28,12 +28,8 @@ const Projects = () => {
             }}>Projects</h1>
       </div>
 
-      <motion.div className="projects-container"
-       variants={fadeIn('right',0.2)}
- initial='hidden'
-  whileInView={'show'}
-    viewport={{once:false,amount:0.7}}
-
+      <div className="projects-container"
+       
       >
         <Card className="card"  style={{
         backgroundColor:theme ==="dark"?"black":"white",
@@ -122,7 +118,7 @@ const Projects = () => {
             <Button size='small' variant='outlined'>Live Demo</Button>
           </CardActions>
         </Card>
-      </motion.div>
+      </div>
     </div>
   );
 };

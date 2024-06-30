@@ -84,16 +84,13 @@ const ContactUs = () => {
         </h1>
       </div>
       <div className="form-container">
-        <motion.div
+        <div
           className="form"
           style={{
             backgroundColor: theme === "dark" ? "#101316" : "",
             color: theme === "dark" ? "white" : "",
           }}
-          variants={fadeIn("right", 0.2)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
+     
         >
           <div className="sub-heading">
             <h3>Fill The Form</h3>
@@ -174,7 +171,7 @@ const ContactUs = () => {
               </div>
             </Box>
           </div>
-        </motion.div>
+        </div>
 
         <motion.div className="images"
         variants={fadeIn('left',0.2)}
