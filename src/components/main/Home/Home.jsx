@@ -8,7 +8,9 @@ import CloseIcon from '@mui/icons-material/Close';
 import { Button } from '@mui/material';
 import { ThemeContext } from '../../Context/themeContext';
 import { useContext } from "react";
+  import {motion} from 'framer-motion'
 
+import { fadeIn } from "../../../variants";
 const Home = () => {
   const {theme}=useContext(ThemeContext);
   return (
@@ -19,7 +21,12 @@ const Home = () => {
       }
     }>
       <div className={"home-content"} >
-        <div className="heading-content"> 
+        <motion.div className="heading-content"
+          variants={fadeIn('up',0.2)}
+          initial='hidden'
+          whileInView={'show'}
+          viewport={{once:false,amount:0.7}}
+        > 
           <h2 id="hello"  style={{
             color:theme ==="dark"?'white':"black"
           }}>Hello !</h2>
@@ -38,7 +45,7 @@ const Home = () => {
                loop
             />
           </div>
-        </div>
+        </motion.div>
         <div className="social-icons" style={
           {
             color:theme==="dark"?"white":""

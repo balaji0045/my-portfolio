@@ -8,6 +8,10 @@ import SearchIcon from '@mui/icons-material/Search';
 import SpeedIcon from '@mui/icons-material/Speed';
 import { useContext } from 'react';
 import { ThemeContext } from '../../Context/themeContext';
+import {motion} from 'framer-motion'
+import { fadeIn } from "../../../variants";
+
+
 const Service = () => {
    const {theme}=useContext(ThemeContext);
   return (
@@ -22,7 +26,12 @@ const Service = () => {
             color:theme=== 'dark'?"#3399ff":''
                     }}>Services</h2>
          </header>
-    <div className="row-container">
+    <motion.div className="row-container"
+    variants={fadeIn('right',0.2)}
+ initial='hidden'
+  whileInView={'show'}
+    viewport={{once:false,amount:0.7}}
+>
           <div className="columns"
           style={{
             backgroundColor: theme === 'dark'?'black':'white',
@@ -144,7 +153,7 @@ const Service = () => {
           
 
 
-        </div>
+        </motion.div>
 
 
       </div>

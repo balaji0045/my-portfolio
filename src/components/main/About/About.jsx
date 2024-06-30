@@ -7,6 +7,10 @@ import Tooltip from '@mui/material/Tooltip';
 import { styled } from '@mui/system';
 import { useContext } from "react";
 import { ThemeContext } from "../../Context/themeContext";
+import {motion} from 'framer-motion';
+import { fadeIn } from "../../../variants";
+
+
 const CustomTooltip = styled(Tooltip)(({ theme }) => ({
   backgroundColor: '#ffcc00',
   color: 'black',
@@ -35,10 +39,15 @@ const {theme}=useContext(ThemeContext);
 
  <div className="abtdetailscontainer">
 
-<div className="aboutOnly" style={{
+<motion.div className="aboutOnly" style={{
   backgroundColor: theme ==='dark'?"#0e0c0c":'',
   color:theme==='dark'?"white":''
  }}
+ variants={fadeIn('right',0.2)}
+ initial='hidden'
+  whileInView={'show'}
+    viewport={{once:false,amount:0.7}}
+
 >
        <div className="abtdetailsHeading">
 
@@ -83,13 +92,18 @@ const {theme}=useContext(ThemeContext);
 
          </div>
 
-    </div>
+    </motion.div>
 
-  <div className="skillsContainer"
+  <motion.div className="skillsContainer"
    style={{
   backgroundColor: theme ==='dark'?"#0e0c0c":'',
   color:theme==='dark'?"white":''
  }}
+ variants={fadeIn('left',0.2)}
+ initial='hidden'
+  whileInView={'show'}
+    viewport={{once:false,amount:0.7}}
+
   >
         
          <div className="skillheader">
@@ -194,7 +208,7 @@ const {theme}=useContext(ThemeContext);
    </div>
 
 
-    </div>
+    </motion.div>
 
       </div>
 
