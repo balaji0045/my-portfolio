@@ -115,7 +115,9 @@ const Projects = () => {
           </CardContent>
           <CardActions className="card-actions">
             <Button size='small' variant='outlined'>Code</Button>
-            <Button size='small' variant='outlined' component="a" href="https://gym-website-blond.vercel.app/">Live Demo</Button>
+            <Button size='small' variant='outlined' href="https://gym-website-blond.vercel.app/" 
+  target="_blank" 
+  rel="noopener noreferrer">Live Demo</Button>
           </CardActions>
         </Card>
       </div>
