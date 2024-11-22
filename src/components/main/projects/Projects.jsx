@@ -57,7 +57,7 @@ const Projects = () => {
             </Typography>
           </CardContent>
           <CardActions className="card-actions">
-            <Button size='small' variant='outlined'>Code</Button>
+            <Button size='small' variant='outlined' component='a' href="https://gym-website-blond.vercel.app/">Code</Button>
             <Button size='small' variant='outlined'>Live Demo</Button>
           </CardActions>
         </Card>
