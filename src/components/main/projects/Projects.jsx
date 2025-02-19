@@ -10,31 +10,31 @@ import portfolio from '../../../assets/portfolio-screenshot.jpg';
 import gym from '../../../assets/gym website-screenshot.jpg';
 import { useContext } from 'react';
 import { ThemeContext } from '../../Context/themeContext';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import { fadeIn } from "../../../variants";
 
 
 const Projects = () => {
-  const {theme}=useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   return (
     <div className='projects'
       style={{
-        backgroundColor:theme ==="dark"?"#212529":"white"
+        backgroundColor: theme === "dark" ? "#212529" : "white"
       }}
     >
       <div className="header">
         <h1 style={{
-          color:theme=== 'dark'?"#3399ff":'black'
-            }}>Projects</h1>
+          color: theme === 'dark' ? "#3399ff" : 'black'
+        }}>Projects</h1>
       </div>
 
       <div className="projects-container"
-       
+
       >
-        <Card className="card"  style={{
-        backgroundColor:theme ==="dark"?"black":"white",
-        
-      }}>
+        <Card className="card" style={{
+          backgroundColor: theme === "dark" ? "black" : "white",
+
+        }}>
           <CardMedia
             component="img"
             alt="Hospital Management System"
@@ -44,15 +44,15 @@ const Projects = () => {
           />
           <CardContent className="card-content" >
             <Typography className='card-heading' gutterBottom variant="h5" component={"div"}
-          style={{ color:theme ==='dark'?'white':'black'}}
-          >
+              style={{ color: theme === 'dark' ? 'white' : 'black' }}
+            >
 
-            
+
               Hospital Management System
             </Typography>
-            <Typography className='sub-heading' color={"text.secondary"} 
-              style={{ color:theme ==='dark'?'white':'black'}}
-                      >
+            <Typography className='sub-heading' color={"text.secondary"}
+              style={{ color: theme === 'dark' ? 'white' : 'black' }}
+            >
               Spring Boot project for Hospital Management
             </Typography>
           </CardContent>
@@ -63,9 +63,9 @@ const Projects = () => {
         </Card>
 
         <Card className="card" style={{
-        backgroundColor:theme ==="dark"?"black":"white",
-        
-      }}>
+          backgroundColor: theme === "dark" ? "black" : "white",
+
+        }}>
           <CardMedia
             component="img"
             alt="Portfolio In React Js"
@@ -75,13 +75,13 @@ const Projects = () => {
           />
           <CardContent className="card-content">
             <Typography className='card-heading' gutterBottom variant="h5" component={"div"}
-              style={{ color:theme ==='dark'?'white':'black'}}
-                          >
+              style={{ color: theme === 'dark' ? 'white' : 'black' }}
+            >
               Portfolio In React Js
             </Typography>
             <Typography className='sub-heading' variant='body2' color={"text.secondary"}
-            style={{ color:theme ==='dark'?'white':'black'}}
-                          >
+              style={{ color: theme === 'dark' ? 'white' : 'black' }}
+            >
               This is my Personal Portfolio Project created in React Js
             </Typography>
           </CardContent>
@@ -91,10 +91,10 @@ const Projects = () => {
           </CardActions>
         </Card>
 
-        <Card className="card"  style={{
-        backgroundColor:theme ==="dark"?"black":"white",
-        
-      }}>
+        <Card className="card" style={{
+          backgroundColor: theme === "dark" ? "black" : "white",
+
+        }}>
           <CardMedia
             component="img"
             alt="Gym Website"
@@ -104,20 +104,20 @@ const Projects = () => {
           />
           <CardContent className="card-content">
             <Typography className='card-heading' gutterBottom variant="h5" component={"div"}
-             style={{ color:theme ==='dark'?'white':'black'}}
-                >
+              style={{ color: theme === 'dark' ? 'white' : 'black' }}
+            >
               Gym Website
             </Typography>
             <Typography className='sub-heading' variant='body2' color={"text.secondary"}
-              style={{ color:theme ==='dark'?'white':'black'}}>
+              style={{ color: theme === 'dark' ? 'white' : 'black' }}>
               This is a Gym Website
             </Typography>
           </CardContent>
           <CardActions className="card-actions">
             <Button size='small' variant='outlined'>Code</Button>
-            <Button size='small' variant='outlined' href="https://gym-website-blond.vercel.app/" 
-  target="_blank" 
-  rel="noopener noreferrer">Live Demo</Button>
+            <Button size='small' variant='outlined' href="https://gym-website-blond.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer">Live Demo</Button>
           </CardActions>
         </Card>
       </div>
