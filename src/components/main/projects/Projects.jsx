@@ -8,6 +8,8 @@ import CardActions from '@mui/material/CardActions';
 import hospital from '../../../assets/hospital-Project-screenShot.jpg';
 import portfolio from '../../../assets/portfolio-screenshot.jpg';
 import gym from '../../../assets/gym website-screenshot.jpg';
+import votepage from '../../../assets/userpagescreenshot.png';
+
 import { useContext } from 'react';
 import { ThemeContext } from '../../Context/themeContext';
 import { motion } from 'framer-motion';
@@ -120,6 +122,40 @@ const Projects = () => {
               rel="noopener noreferrer">Live Demo</Button>
           </CardActions>
         </Card>
+
+
+
+        {/* New Project Added */}
+        <Card className="card" style={{
+          backgroundColor: theme === "dark" ? "black" : "white",
+
+        }}>
+          <CardMedia
+            component="img"
+            alt="Vote Appliaction"
+            height="140"
+            image={votepage}
+            className="card-media"
+          />
+          <CardContent className="card-content">
+            <Typography className='card-heading' gutterBottom variant="h5" component={"div"}
+              style={{ color: theme === 'dark' ? 'white' : 'black' }}
+            >
+             Vote Application
+            </Typography>
+            <Typography className='sub-heading' variant='body2' color={"text.secondary"}
+              style={{ color: theme === 'dark' ? 'white' : 'black' }}>
+              This is a Voting Application using Mern Stack
+            </Typography>
+          </CardContent>
+          <CardActions className="card-actions">
+            <Button size='small' variant='outlined' >Code</Button>
+            <Button size='small' variant='outlined' href="https://vote-app-sepia.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer">Live Demo</Button>
+          </CardActions>
+        </Card>
+
       </div>
     </div>
   );
